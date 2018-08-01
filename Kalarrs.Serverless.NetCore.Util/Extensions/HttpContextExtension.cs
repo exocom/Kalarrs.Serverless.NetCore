@@ -7,19 +7,20 @@ using Amazon.Lambda.APIGatewayEvents;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Routing;
 
-namespace Kalarrs.Serverless.NetCore.Util
+namespace Kalarrs.Serverless.NetCore.Util.Extensions
 {
-    public static class Extensions
+    public static class HttpContextExtension
     {
-        public static async Task<APIGatewayProxyRequest> ToAPIGatewayProxyRequest(this HttpContext context, string resource)
+        public static async Task<APIGatewayProxyRequest> ToApiGatewayProxyRequest(this HttpContext context, string resource)
         {
             var request = context.Request;
             string body = null;
-            
-            if (request.Body != null) {
+
+            if (request.Body != null)
+            {
                 using (var reader = new StreamReader(request.Body, Encoding.UTF8))
-                {  
-                    body = await reader.ReadToEndAsync();
+                {
+                    body = await reader.ReadToEndAsync().ConfigureAwait(false);
                 }
             }
 

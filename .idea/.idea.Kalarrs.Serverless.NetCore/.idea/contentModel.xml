@@ -1,12 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="$USER_HOME$/Library/Caches/Rider2017.3/resharper-host/local/Transient/ReSharperHost/v11/SolutionCaches/_Kalarrs.Serverless.NetCore.-1732399068.00" t="ExcludeRecursive" />
+    <e p="$USER_HOME$/Library/Caches/Rider2018.1/resharper-host/local/Transient/ReSharperHost/v12/SolutionCaches/_Kalarrs.Serverless.NetCore.-484910246.00" t="ExcludeRecursive" />
     <e p="$PROJECT_DIR$" t="IncludeFlat">
       <e p="Kalarrs.Serverless.NetCore.sln" t="IncludeFlat" />
       <e p="Kalarrs.Serverless.NetCore.Util" t="IncludeRecursive">
         <e p=".gitignore" t="Include" />
         <e p="bin" t="ExcludeRecursive" />
+        <e p="EnvironmentVariable.cs" t="Include" />
+        <e p="EventType.cs" t="Include" />
+        <e p="Extensions" t="Include">
+          <e p="HttpContextExtension.cs" t="Include" />
+          <e p="RouteBuilderExtension.cs" t="Include" />
+        </e>
+        <e p="HttpConfig.cs" t="Include" />
+        <e p="HttpMethod.cs" t="Include" />
         <e p="Kalarrs.Serverless.NetCore.Util.csproj" t="IncludeRecursive" />
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
@@ -15,7 +23,21 @@
             </e>
           </e>
         </e>
-        <e p="Util.cs" t="Include" />
+        <e p="RequestDelegates" t="Include">
+          <e p="ApiGateway.cs" t="Include" />
+          <e p="Schedule.cs" t="Include" />
+        </e>
+        <e p="ServerlessConfigs" t="Include">
+          <e p="Custom.cs" t="Include" />
+          <e p="Function.cs" t="Include" />
+          <e p="FunctionEvent.cs" t="Include" />
+          <e p="HttpEvent.cs" t="Include" />
+          <e p="Provider.cs" t="Include" />
+          <e p="ScheduleEvent.cs" t="Include" />
+          <e p="ScheduleEventMeta.cs" t="Include" />
+          <e p="ServerlessConfig.cs" t="Include" />
+        </e>
+        <e p="ServerlessProject.cs" t="Include" />
       </e>
       <e p="Kalarrs.Sreverless.NetCore" t="IncludeRecursive">
         <e p=".gitignore" t="Include" />
