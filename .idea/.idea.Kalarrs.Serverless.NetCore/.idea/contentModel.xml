@@ -38,16 +38,17 @@
           <e p="ServerlessConfig.cs" t="Include" />
         </e>
         <e p="ServerlessProject.cs" t="Include" />
+        <e p="Startup.cs" t="Include" />
       </e>
       <e p="Kalarrs.Sreverless.NetCore" t="IncludeRecursive">
         <e p=".gitignore" t="Include" />
         <e p="bin" t="ExcludeRecursive" />
         <e p="Class.cs" t="Include" />
-        <e p="Kalarrs.Sreverless.NetCore.csproj" t="IncludeRecursive" />
+        <e p="Kalarrs.Serverless.NetCore.csproj" t="IncludeRecursive" />
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
             <e p="netcoreapp2.0" t="Include">
-              <e p="Kalarrs.Sreverless.NetCore.AssemblyInfo.cs" t="Include" />
+              <e p="Kalarrs.Serverless.NetCore.AssemblyInfo.cs" t="Include" />
             </e>
           </e>
         </e>

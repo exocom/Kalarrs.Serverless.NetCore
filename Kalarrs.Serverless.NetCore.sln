@@ -2,7 +2,7 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kalarrs.Serverless.NetCore.Util", "Kalarrs.Serverless.NetCore.Util\Kalarrs.Serverless.NetCore.Util.csproj", "{C6DAF36E-4CCA-4A07-8010-4A7B4AA007D9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kalarrs.Sreverless.NetCore", "Kalarrs.Sreverless.NetCore\Kalarrs.Sreverless.NetCore.csproj", "{2A2B10C4-0D97-470F-88BE-6586EBDC1172}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kalarrs.Serverless.NetCore", "Kalarrs.Sreverless.NetCore\Kalarrs.Serverless.NetCore.csproj", "{AC451856-285B-4A06-BEA8-732E5EB84992}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -18,9 +18,9 @@ Global
 		{C6DAF36E-4CCA-4A07-8010-4A7B4AA007D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C6DAF36E-4CCA-4A07-8010-4A7B4AA007D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C6DAF36E-4CCA-4A07-8010-4A7B4AA007D9}.Release|Any CPU.Build.0 = Release|Any CPU
-		{2A2B10C4-0D97-470F-88BE-6586EBDC1172}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{2A2B10C4-0D97-470F-88BE-6586EBDC1172}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{2A2B10C4-0D97-470F-88BE-6586EBDC1172}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{2A2B10C4-0D97-470F-88BE-6586EBDC1172}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AC451856-285B-4A06-BEA8-732E5EB84992}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AC451856-285B-4A06-BEA8-732E5EB84992}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AC451856-285B-4A06-BEA8-732E5EB84992}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AC451856-285B-4A06-BEA8-732E5EB84992}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
