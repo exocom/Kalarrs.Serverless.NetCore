@@ -17,8 +17,10 @@ namespace Kalarrs.Serverless.NetCore.Util.RequestDelegates
         {
             return async (context) =>
             {
-                if (parameterInfos.Count > 2) throw new Exception("Unrecongnized paramter count for HTTP method. Expected 2 paramters max.");
-
+                if (parameterInfos.Count > 2) throw new Exception("Unrecongnized paramter count for HTTP method. Expected 2 paramters. (object event, ILambdaContext context)");
+                // NOTE: KAL-19 unable to check paramter 2 to see if it ILambdaContext. Will allow (object e, object context) which won't work on AWS but will work here.
+                // tried https://stackoverflow.com/questions/4963160/how-to-determine-if-a-type-implements-an-interface-with-c-sharp-reflection
+                
                 APIGatewayProxyResponse response;
                 var apiGatewayProxyRequest = await context.ToApiGatewayProxyRequest(httpConfig.Path).ConfigureAwait(false);
 
