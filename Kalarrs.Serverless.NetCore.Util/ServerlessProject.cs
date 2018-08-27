@@ -25,6 +25,9 @@ namespace Kalarrs.Serverless.NetCore.Util
             Environment.GetEnvironmentVariables(EnvironmentVariableTarget.Process);
 
         public string Port => _serverlessConfig?.Custom?.LocalDevPort ?? DefaultPort;
+        public bool ScheduleLocalTime => _serverlessConfig.Custom.LocalDevScheduleShowLocalTime ?? true;
+        public bool ScheduleGet => _serverlessConfig?.Custom?.LocalDevScheduleMethodGet ?? true;
+        public bool SchedulePost => _serverlessConfig?.Custom?.LocalDevScheduleMethodPost ?? true;
 
         public ServerlessProject(string path = null)
         {
@@ -66,6 +69,7 @@ namespace Kalarrs.Serverless.NetCore.Util
                     {
                         httpConfigs.Add(new HttpConfig()
                         {
+                            FunctionName = funtionKeyValue.Key,
                             EventType = EventType.Http,
                             Hander = function.Handler,
                             Environment = function.Environment,
@@ -77,16 +81,34 @@ namespace Kalarrs.Serverless.NetCore.Util
 
                     if (schedule != null)
                     {
-                        httpConfigs.Add(new HttpConfig()
+                        if (ScheduleGet)
                         {
-                            EventType = EventType.Schedule,
-                            Hander = function.Handler,
-                            Environment = function.Environment,
-                            Method = HttpMethod.Get,
-                            Path = $"{funtionKeyValue.Key}/{(_serverlessConfig.Custom.LocalDevScheduleShowLocalTime ? schedule.Meta.Local : schedule.Meta.Utc)}",
-                            Cors = true,
-                            RequestBody = schedule.Input
-                        });
+                            httpConfigs.Add(new HttpConfig()
+                            {
+                                FunctionName = funtionKeyValue.Key,
+                                EventType = EventType.Schedule,
+                                Hander = function.Handler,
+                                Environment = function.Environment,
+                                Method = HttpMethod.Get,
+                                Path = $"{funtionKeyValue.Key}/{(ScheduleLocalTime ? schedule.Meta.Local : schedule.Meta.Utc)}",
+                                Cors = true,
+                                RequestBody = schedule.Input
+                            });
+                        }
+
+                        if (SchedulePost)
+                        {
+                            httpConfigs.Add(new HttpConfig()
+                            {
+                                FunctionName = funtionKeyValue.Key,
+                                EventType = EventType.Schedule,
+                                Hander = function.Handler,
+                                Environment = function.Environment,
+                                Method = HttpMethod.Post,
+                                Path = $"{funtionKeyValue.Key}/{(ScheduleLocalTime ? schedule.Meta.Local : schedule.Meta.Utc)}",
+                                Cors = true
+                            });
+                        }
                     }
                 }
             }

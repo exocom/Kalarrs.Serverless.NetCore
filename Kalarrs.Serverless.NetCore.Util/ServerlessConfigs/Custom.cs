@@ -3,6 +3,8 @@
     public class Custom
     {
         public string LocalDevPort { get; set; }
-        public bool LocalDevScheduleShowLocalTime { get; set; }
+        public bool? LocalDevScheduleMethodGet { get; set; }
+        public bool? LocalDevScheduleMethodPost { get; set; }
+        public bool? LocalDevScheduleShowLocalTime { get; set; }
     }
 }
