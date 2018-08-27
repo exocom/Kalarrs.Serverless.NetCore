@@ -18,7 +18,7 @@ namespace Kalarrs.Serverless.NetCore.Util
         public string MethodName => HandlerRegex.Replace(Hander, "$4");
 
         public HttpMethod? Method { get; set; }
-
+        public string FunctionName { get; set; }
         public string Path
         {
             get => EventType.ToString().ToLowerInvariant() + "/" + _path;

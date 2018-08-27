@@ -27,7 +27,7 @@ namespace Kalarrs.Serverless.NetCore.Util.Extensions
                 var parameters = handlerMethod.GetParameters();
 
                 Console.ForegroundColor = ConsoleColor.DarkYellow;
-                Console.WriteLine($"{httpConfig.MethodName}:");
+                Console.WriteLine($"{httpConfig.FunctionName}:");
                 Console.Write($" {httpConfig.Method} ");
                 Console.ResetColor();
                 Console.Write($"http://localhost:{serverlessProject.Port}/{httpConfig.PathToExpressRouteParameters()}\n");
