@@ -3,7 +3,7 @@
     <Description>Serverless Framework .NET Core support - Util package.</Description>
     <TargetFramework>netcoreapp2.0</TargetFramework>
     <AssemblyTitle>Kalarrs.Serverless.NetCore.Util</AssemblyTitle>
-    <VersionPrefix>1.0.1</VersionPrefix>
+    <VersionPrefix>1.0.2</VersionPrefix>
     <AssemblyName>Kalarrs.Serverless.NetCore.Util</AssemblyName>
     <PackageId>Kalarrs.Serverless.NetCore.Util</PackageId>
     <PackageTags>AWS;Amazon;Lambda;Serverless</PackageTags>
